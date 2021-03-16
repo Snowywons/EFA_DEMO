@@ -27,5 +27,6 @@ namespace EFA_DEMO.Models
     
         public virtual DbSet<Log> Logs { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
     }
 }

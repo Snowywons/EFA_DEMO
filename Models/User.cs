@@ -18,6 +18,7 @@ namespace EFA_DEMO.Models
         public User()
         {
             this.Logs = new HashSet<Log>();
+            this.Posts = new HashSet<Post>();
         }
     
         public int Id { get; set; }
@@ -29,5 +30,7 @@ namespace EFA_DEMO.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Log> Logs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Post> Posts { get; set; }
     }
 }

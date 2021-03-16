@@ -20,16 +20,33 @@ public static class DBEntitiesExtensionsMethods
             Admin = user.Admin
         };
     }
+
+    public static PostView ToPostView(this Post post)
+    {
+        return new PostView()
+        {
+            Id = post.Id,
+            Title = post.Title,
+            Content = post.Content,
+            Tags = post.Tags,
+            CreationDate = post.CreationDate,
+            UserId = post.UserId,
+            User = post.User.ToUserView()
+        };
+    }
+
     public static bool UserNameExist(this DBEntities DB, string userName)
     {
         User user = DB.Users.Where(u => u.UserName == userName).FirstOrDefault();
         return (user != null);
     }
+
     public static User FindByUserName(this DBEntities DB, string userName)
     {
         User user = DB.Users.Where(u => u.UserName == userName).FirstOrDefault();
         return user;
     }
+
     public static UserView AddUser(this DBEntities DB, UserView userView)
     {
         userView.SaveAvatar();
@@ -38,6 +55,7 @@ public static class DBEntitiesExtensionsMethods
         DB.SaveChanges();
         return user.ToUserView();
     }
+
     public static bool UpdateUser(this DBEntities DB, UserView userView)
     {
         userView.SaveAvatar();
@@ -47,6 +65,7 @@ public static class DBEntitiesExtensionsMethods
         DB.SaveChanges();
         return true;
     }
+
     public static bool RemoveUser(this DBEntities DB, UserView userView)
     {
         userView.RemoveAvatar();

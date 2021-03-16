@@ -54,6 +54,7 @@ namespace EFA_DEMO.Controllers
         {
             return View(new UserView());
         }
+
         [HttpPost]
         public ActionResult Subscribe(UserView userView)
         {
@@ -75,6 +76,7 @@ namespace EFA_DEMO.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Login(LoginView loginView)
         {
@@ -103,7 +105,7 @@ namespace EFA_DEMO.Controllers
                 DB.SaveChanges();
                 return null; */
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Posts");
         }
 
         public ActionResult Logout()
@@ -119,6 +121,7 @@ namespace EFA_DEMO.Controllers
             ViewBag.PasswordChangeToken = Guid.NewGuid().ToString().Substring(0,8);
             return View(userView);
         }
+
         [HttpPost]
         public ActionResult Profil(UserView userview)
         {
@@ -167,6 +170,11 @@ namespace EFA_DEMO.Controllers
                 return PartialView(logs);
             }
             return null;
+        }
+
+        public ActionResult About()
+        {
+            return View();
         }
     }
 }

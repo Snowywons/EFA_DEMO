@@ -1,5 +1,8 @@
 ﻿@model IEnumerable<EFA_DEMO.Models.UserView>
 
+<h2>Usagers en ligne</h2>
+<hr />
+
 @if (Model.Count() > 1)
 {
     foreach (var item in Model)
@@ -14,3 +17,5 @@ else
 {
     <span>Aucun usager autre que vous est en ligne</span>
 }
+
+<hr />

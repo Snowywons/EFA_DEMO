@@ -1,0 +1,29 @@
+﻿@model IEnumerable<EFA_DEMO.Models.Post>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container body-content">
+    @if (ViewBag.Tags != null)
+    {
+        <h2>Recherche par étiquettes</h2>
+        foreach (var tag in ViewBag.Tags)
+        {
+            <span class="tag">#@tag</span>
+        }
+
+        @Helper.GlyphiconAction("ClearTags", "Posts", "glyphicon-remove-circle", "Effacer")
+
+        <hr />
+    }
+
+    <br />
+
+    @foreach (var post in Model)
+    {
+        PostView postView = post.ToPostView();
+
+        @Helper.Post(postView, OnlineUsers.CurrentUser);
+    }
+</div>

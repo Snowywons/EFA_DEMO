@@ -46,6 +46,7 @@ namespace EFA_DEMO.Models
             AvatarReference.MaxSize = 512;
             AvatarReference.HasThumbnail = false;
         }
+
         public UserView()
         {
             InitAvatarManagement();
@@ -55,14 +56,17 @@ namespace EFA_DEMO.Models
         {
             return AvatarReference.GetURL(AvatarId, false);
         }
+
         public void SaveAvatar()
         {
             AvatarId = AvatarReference.SaveImage(AvatarImageData, AvatarId);
         }
+
         public void RemoveAvatar()
         {
             AvatarReference.Remove(AvatarId);
         }
+
         public User ToUser()
         {   // Attention cette méthode retourne une instance de User
             // qui ne sera pas utilisable en tant cible de modification
@@ -79,6 +83,7 @@ namespace EFA_DEMO.Models
                 Admin = this.Admin
             };
         }
+
         public void CopyToUser(User user)
         { // Utilisez cette fonction pour copier un UserView dans en User
             user.Id = Id;
@@ -88,6 +93,7 @@ namespace EFA_DEMO.Models
             user.Password = Password;
             user.Admin = Admin;
         }
+
         public void CopyToUserView(UserView user)
         { // Utilisez cette fonction pour copier un UserView dans un autre UserView
             user.Id = Id;
@@ -109,6 +115,5 @@ namespace EFA_DEMO.Models
         [Display(Name = "Mot de passe")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-
     }
  }

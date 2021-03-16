@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: green;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,6 +24,10 @@ textarea {
     max-width: 280px;
 }
 
+label {
+    color: white;
+}
+
 .avatar {
     width: 40px;
     height: 40px;
@@ -37,7 +42,6 @@ textarea {
 }
 
 .menuTitle {
-    color: #9d9d9d;
 }
 
 .menuTitle:hover {
@@ -46,4 +50,121 @@ textarea {
 
 .UploadedImage {
     max-width: 100%;
+}
+
+/*CSS utiles du PDF*/
+
+.post {
+    margin: auto;
+    min-width: 400px;
+    max-width: 800PX;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding: 8px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: large;
+    font-weight: bold;
+}
+
+h2, h3 {
+    color: #90ee90
+}
+
+.postHeader {
+    margin: -8px;
+    margin-bottom: 8px;
+    height: 50px;
+    padding-top: 16px;
+    padding-left: 6px;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 49% 50%;
+    background-color: #90ee90;
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Arial Rounded MT'
+}
+
+.postTitle {
+    padding: 8px;
+    margin: -8px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 79% 7% 7% 7%
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: large;
+    font-weight: bold
+}
+
+.postContent {
+    margin-top: 20px;
+    font-size: medium;
+    font-family: 'Times New Roman',Times,serif
+}
+
+.tags {
+    padding: 8px;
+    margin: -8px;
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    color: #6495ed
+}
+
+.tag {
+    color: #0ff;
+    font-size: 1.5em
+}
+
+.glyphiconStyle {
+    font-size: 22px !important;
+    margin-right: 4px !important;
+    margin-left: 4px !important;
+    color: #90ee90
+}
+
+.pageHeader {
+    font-size: 2em;
+    font-weight: bold;
+    margin: auto;
+    width: 40%
+}
+
+.scrollPanel {
+    height: 100vh;
+    margin: auto;
+    width: 90%;
+    overflow: auto
+}
+
+.contentImage {
+    width: 100%
+}
+
+.applicationName {
+    color: #90ee90 !important;
+    font-weight: bold
 }

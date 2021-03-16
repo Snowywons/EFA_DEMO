@@ -1,0 +1,32 @@
+﻿@model EFA_DEMO.Models.PostView
+
+@{
+    ViewBag.Title = "ConfirmDelete";
+}
+
+<h2>
+    @Helper.GlyphiconAction("Index", "Posts", "glyphicon-arrow-left", "Retour")
+    Effacer ce post?
+</h2>
+
+<br />
+<br />
+
+<div>
+    @{ 
+        PostView postView = Model;
+        UserView userView = Model.User;
+
+        @Helper.Post(postView, userView);
+    }
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Effacer" class="btn btn-danger" />
+        </div>
+    }
+
+</div>

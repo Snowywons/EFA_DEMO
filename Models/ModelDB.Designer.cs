@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Nicolas.Chourot\Desktop\Source EFA\Models\ModelDB.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Cégep Lionel-Groulx\Session 4 - Hiver 2021\Dév d'app WEB - Chourot\EFA_DEMO_TP1\EFA_DEMO_TP1\Models\ModelDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

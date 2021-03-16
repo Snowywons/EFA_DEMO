@@ -128,10 +128,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Data\EFAContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DAL.cs" />
     <Compile Include="Models\ImageGUIDReference.cs" />
     <Compile Include="Models\Log.cs">
@@ -152,6 +155,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Post.cs">
+      <DependentUpon>ModelDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PostView.cs" />
     <Compile Include="Models\User.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
@@ -174,6 +181,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Post-it.png" />
     <Content Include="Models\ModelDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelDB.edmx</DependentUpon>
@@ -227,6 +235,12 @@
     <Content Include="Views\Users\AllUsersLogs.cshtml" />
     <Content Include="Views\Users\UsersLogs.cshtml" />
     <Content Include="Views\Users\UserLogs.cshtml" />
+    <Content Include="Views\Posts\Index.cshtml" />
+    <Content Include="Views\Posts\Create.cshtml" />
+    <Content Include="Views\Posts\Edit.cshtml" />
+    <Content Include="Views\Posts\ConfirmDelete.cshtml" />
+    <Content Include="Views\Posts\Tags.cshtml" />
+    <Content Include="Views\Users\About.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
